@@ -31,11 +31,10 @@
                 <span class="barra"></span>
                 <label for="password">password</label>
             </div>
-            <button type="submit">ingresar</button>
+            <button type="submit" id="btn">ingresar</button>
             <a href="registro.php">registrarme</a>
         </div>
     </form>
-    <script src="js/app.js"></script>
 </body>
 
 </html>

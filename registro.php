@@ -36,9 +36,10 @@
                 <span class="barra"></span>
                 <label for="password">password</label>
             </div>
+            <button type="submit" id="btn">ingresar</button>
+            <a href="index.php">iniciar sesion</a>
+            <div id="respuesta"></div>
         </div>
-        <button>registrarme</button>
-        <a href="index.php">iniciar sesion</a>
     </form>
     
     <script src="js/main.js"></script>

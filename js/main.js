@@ -6,25 +6,25 @@ const password = document.getElementById('password');
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const datos = new FormData();
-
-    datos.append('usuario', usuario.value.toLocaleLowerCase());
-    datos.append('email', email.value.toLocaleLowerCase());
-    datos.append('password', password.value.toLocaleLowerCase());
-
     const registrarUsuario = () => {
-        const ruta = 'http://localhost/notes-app-php/registrarUsuario.php';
+        const formData = new FormData();
+
+        formData.append('usuario', usuario.value.toLocaleLowerCase());
+        formData.append('email', email.value.toLocaleLowerCase());
+        formData.append('password', password.value.toLocaleLowerCase());
+
+        const ruta = 'http://localhost/notes-app/registrarUsuario.php';
         fetch(ruta, {
-            method: 'post',
-            body: datos
-        }).then((respuesta) => {
-            respuesta.ok
-                ? Promise.resolve(respuesta)
-                : Promise.reject(respuesta);
-        }).then((respuesta) => {
-            respuesta.text();
+            method: 'POST',
+            body: formData
+        }).then((response) => {
+            response.ok
+                ? Promise.resolve(response)
+                : Promise.reject(response);
+        }).then((response) => {
+            console.log(response.text());
         }).then((data) => {
-            if(data == 'ok') {
+            if(data == "ok") {
                 location.href = 'index.php';
             };
         }).catch((err) => {
