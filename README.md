@@ -8,3 +8,6 @@ git clone https://github.com/AlexanderMartel/notes-app-php
 ### Contribuidores
 * **DennisMartel**
 * **AlexanderMartel**
+
+### Imágenes proyecto
+* **próximamente**
